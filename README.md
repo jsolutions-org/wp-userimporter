@@ -47,3 +47,27 @@ Every further line must contain one user according to syntax of header line.
 (see above))
 
 `<password>` : the application password (see above)
+
+
+# wp-userdeleter
+CLI to delete wordpress users by username
+
+## Usage
+
+### Create a file with users to delete
+
+One username per line, no other content
+
+### Create an application password in your WP Installation:
+
+see above (importer)
+
+### Call `wpuserdeleter`:
+
+`wpuserdeleter <file> <wp-url> <username> <password>`
+
+(details like above (importer))
+
+ATTENTION: Presently the deleter will try to move content of deleted user to user with id `0`. 
+If the user didn't create any content it is no problem, otherwise there has to be an user with id `0`.
+Will be optimized in further version.
